@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+body {
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+.background-moving {
+  width: 1200px;
+  height: 650px;
+  background-image: url(../images/background.png);
+  background-size: 1000px auto;
+  transform: rotate(-8deg);
+  animation: background-moving 25s linear 0s infinite;
+  position: absolute;
+  top: -80px;
+  left: -50px;
+  z-index: 1;
+}
+
+.move-visual {
+  margin: 30px auto 0;
+  position: relative;
+  width: 1000px;
+  height: 500px;
+  background-color: #222;
+  overflow: hidden;
+}
+
+.move-visual::before {
+  content: "";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.move-visual__title {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -500px;
+  margin-top: -132px;
+  z-index: 3;
+}
+
+.move-visual__balloon {
+  width: 180px;
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.move-visual__text {
+  font-size: 35px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+@keyframes background-moving {
+  0% {
+    background-position: 0px center;
+  }
+  100% {
+    background-position: 1000px center;
+  }
+}
