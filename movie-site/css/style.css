@@ -11,7 +11,7 @@ img {
 .background-moving {
   width: 1200px;
   height: 650px;
-  background-image: url(../images/background.png);
+  background-image: url(../images/background.jpg);
   background-size: 1000px auto;
   transform: rotate(-8deg);
   animation: background-moving 25s linear 0s infinite;
