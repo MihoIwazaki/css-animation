@@ -1,0 +1,256 @@
+@charset "UTF-8";
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  padding: 100px 10px;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.loading {
+  margin-right: 50px;
+}
+
+.loading:last-child {
+  margin-right: 0;
+}
+
+.loading1 {
+  width: 40px;
+  height: 40px;
+  border: 6px solid #e8e8e8;
+  border-top-color: #f1881d;
+  border-radius: 50%;
+  animation: loading1 1s linear 0s infinite;
+}
+
+@keyframes loading1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading2 {
+  display: flex;
+}
+
+.loading2__line {
+  width: 7px;
+  height: 30px;
+  background-color: #f1881d;
+  margin-right: 7px;
+  animation: loading2 1s linear 0s infinite;
+}
+
+.loading2__line:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading2__line:nth-child(3) {
+  margin-right: 0;
+  animation-delay: 0.4s;
+}
+
+@keyframes loading2 {
+  0% {
+    transform: scaleY(1);
+  }
+  20% {
+    transform: scaleY(2);
+  }
+  40% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.loading3 {
+  display: flex;
+}
+
+.loading3__dot {
+  width: 10px;
+  height: 10px;
+  background-color: #f1881d;
+  margin-right: 7px;
+  border-radius: 50%;
+  animation: loading3 1s linear 0s infinite;
+}
+
+.loading3__dot:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.loading3__dot:nth-child(3) {
+  margin-right: 0;
+  animation-delay: 0.2s;
+}
+
+@keyframes loading3 {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.button-wrap {
+  background-color: #333;
+}
+
+.button-wrap .title {
+  color: #fff;
+}
+
+.button {
+  margin-right: 30px;
+  background-color: #666;
+  color: #fff;
+  width: 180px;
+  font-size: 15px;
+  padding: 12px 0;
+  text-align: center;
+}
+
+.button:last-child {
+  margin-right: 0;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button1 {
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.button1::after {
+  box-sizing: border-box;
+  content: "Check!!";
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 15px;
+  padding: 12px;
+  background-color: #11c9d2;
+  display: block;
+  transition: 0.3s;
+  font-weight: bold;
+  position: absolute;
+  right: -100%;
+  top: 0;
+}
+
+.button1:hover {
+  padding-right: 60px;
+}
+
+.button1:hover::after {
+  right: 0;
+}
+
+.button2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.button2__text {
+  position: relative;
+  z-index: 3;
+}
+
+.button2::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #11c9d2;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+  transform: rotate(180deg) scale(0.5);
+  opacity: 0;
+}
+
+.button2:hover::before {
+  transform: rotate(0deg) scale(2);
+  opacity: 1;
+}
+
+.button3 {
+  position: relative;
+  height: 47px;
+  box-sizing: border-box;
+}
+
+.button3 .border {
+  display: block;
+  background-color: #11c9d2;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.button3 .border.top {
+  width: 0%;
+  height: 2px;
+  top: 0;
+  left: 0;
+}
+
+.button3 .border.bottom {
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  right: 0;
+}
+
+.button3 .border.left {
+  width: 2px;
+  height: 0%;
+  bottom: 0;
+  left: 0;
+}
+
+.button3 .border.right {
+  width: 2px;
+  height: 0%;
+  top: 0;
+  right: 0;
+}
+
+.button3:hover .border.top, .button3:hover .border.bottom {
+  width: 100%;
+}
+
+.button3:hover .border.left, .button3:hover .border.right {
+  height: 100%;
+}
