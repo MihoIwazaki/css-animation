@@ -1,0 +1,343 @@
+@charset "UTF-8";
+
+body {
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.content-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.content {
+  margin-right: 20px;
+}
+
+.content:last-chikld {
+  margin-right: 0;
+}
+
+.pudding {
+  width: 200px;
+  height: 202px;
+  position: relative;
+}
+
+.pudding img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pudding__body {
+  z-index: 2;
+  animation: pudding-skew 1.3s ease 0s infinite;
+  transform-origin: 100px bottom;
+}
+
+.pudding__plate {
+  z-index: 1;
+}
+
+@keyframes pudding-skew {
+  0% {
+    transform: skewX(6deg);
+  }
+  5% {
+    transform: skewX(-6deg);
+  }
+  10% {
+    transform: skewX(2deg);
+  }
+  20% {
+    transform: skewX(-2deg);
+  }
+  30% {
+    transform: skewX(0.5deg);
+  }
+  40% {
+    transform: skewX(-0.5deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+
+.tyranno {
+  width: 400px;
+  height: 300px;
+  position: relative;
+  transform: scale(0.85);
+}
+
+.tyranno img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tyranno .face-wrap {
+  animation: face-wrap 4s ease 0s infinite;
+  position: absolute;
+  top: 0;
+  left: -8px;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  transform-origin: 175px 30px;
+}
+
+.tyranno__lower-jaw {
+  z-index: 5;
+  animation: jaw 3s ease 0s infinite;
+  transform-origin: 165px 85px;
+}
+
+.tyranno__face {
+  z-index: 4;
+}
+
+.tyranno__hand-left {
+  z-index: 3;
+  animation: hand-left 2s ease 0s infinite;
+  transform-origin: 230px 140px;
+}
+
+.tyranno__leg-left {
+  z-index: 3;
+  animation: leg-left 3s ease 0s infinite;
+}
+
+.tyranno__tail {
+  z-index: 3;
+  animation: tail 2.5s ease 0s infinite;
+  transform-origin: 370px 150px;
+  top: 10px;
+}
+
+.tyranno__body {
+  z-index: 2;
+  animation: body 2.5s ease 0s infinite;
+}
+
+.tyranno__hand-right {
+  animation: hand-right 3s ease 0s infinite;
+  transform-origin: 180px 160px;
+}
+
+.tyranno__leg-right {
+  animation: leg-right 3s ease 0s infinite;
+}
+
+@keyframes body {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes jaw {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-20deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes face-wrap {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-12deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(-12deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes hand-left {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  70% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes hand-right {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-5deg);
+  }
+  30% {
+    transform: rotate(5deg);
+  }
+  70% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes tail {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-15deg);
+  }
+  60% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes leg-left {
+  0% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+  30% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes leg-right {
+  0% {
+    transform: translateY(0px);
+  }
+  30% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.car-animation {
+  transform: scale(0.65);
+  width: 600px;
+  height: 375px;
+  position: relative;
+  background-image: url(../images/car/background.png);
+  animation: background-moving 7s linear 0s infinite;
+}
+
+.car-animation .car {
+  width: 290px;
+  height: 128px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -145px;
+}
+
+.car-animation .car__body {
+  animation: jolting 1s ease 0s infinite;
+}
+
+.car-animation .car__wheel {
+  position: absolute;
+  z-index: 2;
+  animation: wheel 1.5s linear 0s infinite;
+}
+
+.car-animation .car__wheel--front {
+  right: 40px;
+  bottom: -20px;
+}
+
+.car-animation .car__wheel--behind {
+  left: 60px;
+  bottom: -20px;
+}
+
+@keyframes wheel {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes jolting {
+  0% {
+    transform: translateY(0px);
+  }
+  4% {
+    transform: translateY(5px);
+  }
+  8% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes background-moving {
+  0% {
+    background-position: 0px center;
+  }
+  100% {
+    background-position: 873px center;
+  }
+}
